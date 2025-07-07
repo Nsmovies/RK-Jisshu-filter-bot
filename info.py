@@ -16,40 +16,40 @@ def is_enabled(value, default):
 
 # Main
 SESSION = environ.get("SESSION", "Media_search")
-API_ID = int(environ.get("API_ID", ""))
-API_HASH = environ.get("API_HASH", "")
+API_ID = int(environ.get("API_ID", "13992749"))
+API_HASH = environ.get("API_HASH", "c8b1a7c3ce9aa1d1eec2fee774d48399")
 BOT_TOKEN = environ.get("BOT_TOKEN", "")
 PORT = environ.get("PORT", "8082")
 
 # Owners
 ADMINS = [
     int(admin) if id_pattern.search(admin) else admin
-    for admin in environ.get("ADMINS", "5672857559").split()
+    for admin in environ.get("ADMINS", "5466885993").split()
 ]
 OWNER_USERNAME = environ.get(
-    "OWNER_USERNAME", "IM_JISSHU"
+    "OWNER_USERNAME", "Ravikumarcn"
 )  # without @ or https://t.me/
-USERNAME = environ.get("USERNAME", "")  # ADMIN USERNAME
+USERNAME = environ.get("USERNAME", "Ravikumarcn")  # ADMIN USERNAME
 
 # Database Channel
 CHANNELS = [
     int(ch) if id_pattern.search(ch) else ch
-    for ch in environ.get("CHANNELS", "").split()
+    for ch in environ.get("CHANNELS", "-1002809315510").split()
 ]
 
 # ForceSub Channel & Log Channels
-AUTH_CHANNEL = int(environ.get("AUTH_CHANNEL", ""))
-AUTH_REQ_CHANNEL = int(environ.get("AUTH_REQ_CHANNEL", ""))
-LOG_CHANNEL = int(environ.get("LOG_CHANNEL", ""))
-LOG_API_CHANNEL = int(environ.get("LOG_API_CHANNEL", ""))
-LOG_VR_CHANNEL = int(environ.get("LOG_VR_CHANNEL", ""))
+AUTH_CHANNEL = int(environ.get("AUTH_CHANNEL", "-1002245219361"))
+AUTH_REQ_CHANNEL = int(environ.get("AUTH_REQ_CHANNEL", "-1002245219361"))
+LOG_CHANNEL = int(environ.get("LOG_CHANNEL", "-1001913629397"))
+LOG_API_CHANNEL = int(environ.get("LOG_API_CHANNEL", "-1001913629397"))
+LOG_VR_CHANNEL = int(environ.get("LOG_VR_CHANNEL", "-1001913629397"))
 
 # MongoDB
 DATABASE_URI = environ.get("DATABASE_URI", "")
 DATABASE_NAME = environ.get("DATABASE_NAME", "Cluster0")
 
 # Files index database url
-FILES_DATABASE = environ.get("FILES_DATABASE", "")
+FILES_DATABASE = environ.get("FILES_DATABASE", "-1002809315510")
 COLLECTION_NAME = environ.get("COLLECTION_NAME", "jisshu")
 
 # Other Channel's
@@ -61,14 +61,14 @@ REQUEST_CHANNEL = (
     if request_channel and id_pattern.search(request_channel)
     else None
 )
-MOVIE_UPDATE_CHANNEL = int(environ.get("MOVIE_UPDATE_CHANNEL", "-1001864434358"))
+MOVIE_UPDATE_CHANNEL = int(environ.get("MOVIE_UPDATE_CHANNEL", "-1002622826539"))
 
 # Added Link Here Not Id
-SUPPORT_CHAT = environ.get("SUPPORT_CHAT", "")
-MOVIE_GROUP_LINK = environ.get("MOVIE_GROUP_LINK", "")
+SUPPORT_CHAT = environ.get("SUPPORT_CHAT", "https://t.me/+WBKbCz2fNCo5MWJl")
+MOVIE_GROUP_LINK = environ.get("MOVIE_GROUP_LINK", "https://t.me/+WBKbCz2fNCo5MWJl")
 
 # Verification
-IS_VERIFY = is_enabled("IS_VERIFY", True)
+IS_VERIFY = is_enabled("IS_VERIFY", False)
 # ---------------------------------------------------------------
 TUTORIAL = environ.get("TUTORIAL", "https://t.me/")
 TUTORIAL_2 = environ.get("TUTORIAL_2", "https://t.me/")
@@ -147,9 +147,9 @@ REACTIONS = ["👀", "😱", "🔥", "😍", "🎉", "🥰", "😇", "⚡"]
 # Other Funtions
 FILE_AUTO_DEL_TIMER = int(environ.get("FILE_AUTO_DEL_TIMER", "600"))
 AUTO_FILTER = is_enabled("AUTO_FILTER", True)
-IS_PM_SEARCH = is_enabled("IS_PM_SEARCH", False)
+IS_PM_SEARCH = is_enabled("IS_PM_SEARCH", True)
 IS_SEND_MOVIE_UPDATE = is_enabled(
-    "IS_SEND_MOVIE_UPDATE", False
+    "IS_SEND_MOVIE_UPDATE", True
 )  # Don't Change It ( If You Want To Turn It On Then Turn It On By Commands) We Suggest You To Make It Turn Off If You Are Indexing Files First Time.
 MAX_BTN = int(environ.get("MAX_BTN", "8"))
 AUTO_DELETE = is_enabled("AUTO_DELETE", True)
@@ -164,7 +164,7 @@ LINK_MODE = is_enabled("LINK_MODE", True)
 TMDB_API_KEY = environ.get("TMDB_API_KEY", "")
 
 # Online Streaming And Download
-STREAM_MODE = bool(environ.get("STREAM_MODE", True))  # Set True or Flase
+STREAM_MODE = bool(environ.get("STREAM_MODE", False))  # Set True or Flase
 
 MULTI_CLIENT = False
 SLEEP_THRESHOLD = int(environ.get("SLEEP_THRESHOLD", "60"))
