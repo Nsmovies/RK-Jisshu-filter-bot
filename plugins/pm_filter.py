@@ -307,14 +307,6 @@ async def next_page(bot, query):
         0,
         [
             InlineKeyboardButton(
-                "📥 sᴇɴᴅ ᴀʟʟ ғɪʟᴇs 📥", callback_data=f"send_all#{key}"
-            ),
-        ],
-    )
-    btn.insert(
-        1,
-        [
-            InlineKeyboardButton(
                 "ǫᴜᴀʟɪᴛʏ ", callback_data=f"qualities#{key}#{offset}#{req}"
             ),
             InlineKeyboardButton(
@@ -499,17 +491,8 @@ async def season_search(client: Client, query: CallbackQuery):
             ]
             for file in files
         ]
-
     btn.insert(
         0,
-        [
-            InlineKeyboardButton(
-                "📥 sᴇɴᴅ ᴀʟʟ ғɪʟᴇs 📥", callback_data=f"send_all#{key}"
-            ),
-        ],
-    )
-    btn.insert(
-        1,
         [
             InlineKeyboardButton(
                 "ǫᴜᴀʟɪᴛʏ ", callback_data=f"qualities#{key}#{offset}#{req}"
@@ -684,14 +667,6 @@ async def year_search(client: Client, query: CallbackQuery):
         0,
         [
             InlineKeyboardButton(
-                "📥 sᴇɴᴅ ᴀʟʟ ғɪʟᴇs 📥", callback_data=f"send_all#{key}"
-            ),
-        ],
-    )
-    btn.insert(
-        1,
-        [
-            InlineKeyboardButton(
                 "ǫᴜᴀʟɪᴛʏ ", callback_data=f"qualities#{key}#{offset}#{req}"
             ),
             InlineKeyboardButton(
@@ -861,14 +836,6 @@ async def quality_search(client: Client, query: CallbackQuery):
 
     btn.insert(
         0,
-        [
-            InlineKeyboardButton(
-                "📥 sᴇɴᴅ ᴀʟʟ ғɪʟᴇs 📥", callback_data=f"send_all#{key}"
-            ),
-        ],
-    )
-    btn.insert(
-        1,
         [
             InlineKeyboardButton(
                 "ǫᴜᴀʟɪᴛʏ", callback_data=f"qualities#{key}#{offset}#{req}"
@@ -1053,14 +1020,6 @@ async def lang_search(client: Client, query: CallbackQuery):
 
     btn.insert(
         0,
-        [
-            InlineKeyboardButton(
-                "📥 sᴇɴᴅ ᴀʟʟ ғɪʟᴇs 📥", callback_data=f"send_all#{key}"
-            ),
-        ],
-    )
-    btn.insert(
-        1,
         [
             InlineKeyboardButton(
                 "ǫᴜᴀʟɪᴛʏ", callback_data=f"qualities#{key}#{offset}#{req}"
@@ -1537,7 +1496,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [
             [
                 InlineKeyboardButton(
-                    "ʀᴇᴘᴏ", url="https://github.com/JisshuTG/Jisshu-filter-bot"
+                    "ʀᴇᴘᴏ", url="https://t.me/KannadaMagaa"
                 )
             ],
             [
@@ -2197,14 +2156,6 @@ async def auto_filter(client, msg, spoll=False, pm_mode=False):
                 0,
                 [
                     InlineKeyboardButton(
-                        "📥 sᴇɴᴅ ᴀʟʟ ғɪʟᴇs 📥", callback_data=f"send_all#{key}"
-                    ),
-                ],
-            )
-            btn.insert(
-                1,
-                [
-                    InlineKeyboardButton(
                         "ǫᴜᴀʟɪᴛʏ ", callback_data=f"qualities#{key}#{offset}#{req}"
                     ),
                     InlineKeyboardButton(
@@ -2220,9 +2171,6 @@ async def auto_filter(client, msg, spoll=False, pm_mode=False):
                 0,
                 [
                     InlineKeyboardButton(
-                        "📥 sᴇɴᴅ ᴀʟʟ ғɪʟᴇs 📥", callback_data=f"send_all#{key}"
-                    ),
-                    InlineKeyboardButton(
                         "ʟᴀɴɢᴜᴀɢᴇ", callback_data=f"languages#{key}#{offset}#{req}"
                     ),
                 ],
@@ -2233,14 +2181,7 @@ async def auto_filter(client, msg, spoll=False, pm_mode=False):
     else:
         btn.insert(
             0,
-            [
-                InlineKeyboardButton(
-                    "📥 sᴇɴᴅ ᴀʟʟ ғɪʟᴇs 📥", callback_data=f"send_all#{key}"
-                ),
-            ],
-        )
-
-        btn.insert(1, [InlineKeyboardButton("🚸 ɴᴏ ᴍᴏʀᴇ ᴘᴀɢᴇs 🚸", user_id=ADMINS[0])])
+            [InlineKeyboardButton("🚸 ɴᴏ ᴍᴏʀᴇ ᴘᴀɢᴇs 🚸", user_id=ADMINS[0])])
 
     if spoll:
         m = await msg.message.edit(
