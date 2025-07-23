@@ -40,19 +40,19 @@ CAPTION_LANGUAGES = [
     "Urdu",
 ]
 
-UPDATE_CAPTION = """<b>𝖭𝖤𝖶 {} 𝖠𝖣𝖣𝖤𝖣 ✅</b>
+UPDATE_CAPTION = """<blockquote>🎉𝖭𝖤𝖶 {} STREAMING NOW</b></blockquote>
 
 🎬 <b>{} {}</b>
 🔰 <b>Quality:</b> {}
-🎧 <b>Audio:</b> {}
+🔊 <b>Audio:</b> {}
 
-<b>✨ Telegram Files ✨</b>
+<b> 📂Telegram Files </b>
 
 {}
 
-<blockquote>〽️ Powered by @Jisshu_bots</b></blockquote>"""
+<blockquote>〽️ Powered by @KannadaMagaa</b></blockquote>"""
 
-QUALITY_CAPTION = """📦 {} : {}\n"""
+QUALITY_CAPTION = """📥 {} : {}\n"""
 
 notified_movies = set()
 movie_files = defaultdict(list)
@@ -209,7 +209,7 @@ async def send_movie_update(bot, file_name, files):
 
     except Exception as e:
         print('Failed to send movie update. Error - ', e)
-        await bot.send_message(LOG_CHANNEL, f"Failed to send movie update. Error - {e}'\n\n<blockquote>If you don’t understand this error, you can ask in our support group: @Jisshu_support.</blockquote>")
+        await bot.send_message(LOG_CHANNEL, f"Failed to send movie update. Error - {e}'\n\n<blockquote>If you don’t understand this error, you can ask in our support group: @KannadaMagaaBot.</blockquote>")
 
 
 async def get_imdb(file_name):
@@ -265,10 +265,15 @@ def generate_unique_id(movie_name):
 
 async def get_qualities(text):
     qualities = [
+        "240p", 
+        "360p", 
         "480p",
         "720p",
         "720p HEVC",
+        "1080p HEVC",
         "1080p",
+        "2K 1440p",
+        "4K 2160p",
         "ORG",
         "org",
         "hdcam",
@@ -295,7 +300,7 @@ async def get_qualities(text):
 
 
 async def Jisshu_qualities(text, file_name):
-    qualities = ["480p", "720p", "720p HEVC", "1080p", "1080p HEVC", "2160p"]
+    qualities = ["240p", "360p", "480p", "720p", "720p HEVC", "1080p HEVC", "1080p", "1080p HEVC", "2K 1440p", "4K 2160p"]
     combined_text = (text.lower() + " " + file_name.lower()).strip()
     if "hevc" in combined_text:
         for quality in qualities:
