@@ -34,7 +34,7 @@ USERNAME = environ.get("USERNAME", "ravikumarcn")  # ADMIN USERNAME
 # Database Channel
 CHANNELS = [
     int(ch) if id_pattern.search(ch) else ch
-    for ch in environ.get("CHANNELS", "-1002430088725").split()
+    for ch in environ.get("CHANNELS", "-1002051915731").split()
 ]
 
 # ForceSub Channel & Log Channels
@@ -45,11 +45,11 @@ LOG_API_CHANNEL = int(environ.get("LOG_API_CHANNEL", "-1001913629397"))
 LOG_VR_CHANNEL = int(environ.get("LOG_VR_CHANNEL", "-1001913629397"))
 
 # MongoDB
-DATABASE_URI = environ.get("DATABASE_URI", "mongodb+srv://King1:King1@cluster0.udffg72.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DATABASE_URI = environ.get("DATABASE_URI", "mongodb+srv://PRE1:PRE1@cluster0.77frc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 DATABASE_NAME = environ.get("DATABASE_NAME", "ravikumar1cn")
 
 # Files index database url
-FILES_DATABASE = environ.get("FILES_DATABASE", "mongodb+srv://King2:King2@cluster0.daup34w.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+FILES_DATABASE = environ.get("FILES_DATABASE", "mongodb+srv://PRE2:PRE2@cluster0.h3if9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 COLLECTION_NAME = environ.get("COLLECTION_NAME", "ravikumar1cn")
 
 # Other Channel's
