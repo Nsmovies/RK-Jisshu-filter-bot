@@ -34,15 +34,15 @@ USERNAME = environ.get("USERNAME", "ravikumarcn")  # ADMIN USERNAME
 # Database Channel
 CHANNELS = [
     int(ch) if id_pattern.search(ch) else ch
-    for ch in environ.get("CHANNELS", "-1002688443781").split()
+    for ch in environ.get("CHANNELS", "-1002430088725").split()
 ]
 
 # ForceSub Channel & Log Channels
-AUTH_CHANNEL = int(environ.get("AUTH_CHANNEL", "-1002688443781"))
-AUTH_REQ_CHANNEL = int(environ.get("AUTH_REQ_CHANNEL", "-1002688443781"))
-LOG_CHANNEL = int(environ.get("LOG_CHANNEL", "-1002688443781"))
-LOG_API_CHANNEL = int(environ.get("LOG_API_CHANNEL", "-1002688443781"))
-LOG_VR_CHANNEL = int(environ.get("LOG_VR_CHANNEL", "-1002688443781"))
+AUTH_CHANNEL = int(environ.get("AUTH_CHANNEL", "-1002245219361"))
+AUTH_REQ_CHANNEL = int(environ.get("AUTH_REQ_CHANNEL", "-1002245219361"))
+LOG_CHANNEL = int(environ.get("LOG_CHANNEL", "-1001913629397"))
+LOG_API_CHANNEL = int(environ.get("LOG_API_CHANNEL", "-1001913629397"))
+LOG_VR_CHANNEL = int(environ.get("LOG_VR_CHANNEL", "-1001913629397"))
 
 # MongoDB
 DATABASE_URI = environ.get("DATABASE_URI", "mongodb+srv://King1:King1@cluster0.udffg72.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
@@ -53,19 +53,19 @@ FILES_DATABASE = environ.get("FILES_DATABASE", "mongodb+srv://King2:King2@cluste
 COLLECTION_NAME = environ.get("COLLECTION_NAME", "ravikumar1cn")
 
 # Other Channel's
-SUPPORT_GROUP = int(environ.get("SUPPORT_GROUP", "-1002688443781"))
+SUPPORT_GROUP = int(environ.get("SUPPORT_GROUP", "-1001913629397"))
 DELETE_CHANNELS = int(environ.get("DELETE_CHANNELS", "0"))
-request_channel = environ.get("REQUEST_CHANNEL", "-1002688443781")
+request_channel = environ.get("REQUEST_CHANNEL", "-1001913629397")
 REQUEST_CHANNEL = (
     int(request_channel)
     if request_channel and id_pattern.search(request_channel)
     else None
 )
-MOVIE_UPDATE_CHANNEL = int(environ.get("MOVIE_UPDATE_CHANNEL", "-1002688443781"))
+MOVIE_UPDATE_CHANNEL = int(environ.get("MOVIE_UPDATE_CHANNEL", "-1002565642490"))
 
 # Added Link Here Not Id
-SUPPORT_CHAT = environ.get("SUPPORT_CHAT", "https://t.me/+WBKbCz2fNCo5MWJl")
-MOVIE_GROUP_LINK = environ.get("MOVIE_GROUP_LINK", "https://t.me/+WBKbCz2fNCo5MWJl")
+SUPPORT_CHAT = environ.get("SUPPORT_CHAT", "https://t.me/KannadaMagaaBot")
+MOVIE_GROUP_LINK = environ.get("MOVIE_GROUP_LINK", "https://t.me/KannadaMagaaZone")
 
 # Verification
 IS_VERIFY = is_enabled("IS_VERIFY", False)
@@ -130,22 +130,22 @@ SEASONS = [f"season {i}" for i in range(1, 23)]
 START_IMG = (
     environ.get(
         "START_IMG",
-        "https://envs.sh/qDC.jpg",
+        "https://i.ibb.co/RGfRT2jk/photo-2025-01-23-05-42-03-7530477859291267076.jpg",
     )
 ).split()
 FORCESUB_IMG = environ.get("FORCESUB_IMG", "https://i.ibb.co/ZNC1Hnb/ad3f2c88a8f2.jpg")
 REFER_PICS = (environ.get("REFER_PICS", "https://envs.sh/PSI.jpg")).split()
 PAYPICS = (
-    environ.get("PAYPICS", "https://envs.sh/gYG.jpg")
+    environ.get("PAYPICS", "https://i.ibb.co/HpNcwvzR/photo-2025-05-06-15-41-18-7530474547871481880.jpg")
 ).split()
 SUBSCRIPTION = environ.get(
-    "SUBSCRIPTION", "https://envs.sh/qD1.jpg"
+    "SUBSCRIPTION", "https://i.ibb.co/Pzshgyfb/photo-2024-06-12-17-04-00-7530477949485580316.jpg"
 )
 REACTIONS = ["👀", "😱", "🔥", "😍", "🎉", "🥰", "😇", "⚡"]
 
 
 # Other Funtions
-FILE_AUTO_DEL_TIMER = int(environ.get("FILE_AUTO_DEL_TIMER", "56"))
+FILE_AUTO_DEL_TIMER = int(environ.get("FILE_AUTO_DEL_TIMER", "1"))
 AUTO_FILTER = is_enabled("AUTO_FILTER", True)
 IS_PM_SEARCH = is_enabled("IS_PM_SEARCH", True)
 IS_SEND_MOVIE_UPDATE = is_enabled(
